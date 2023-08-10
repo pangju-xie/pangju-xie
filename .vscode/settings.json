@@ -1,0 +1,24 @@
+{
+  "C_Cpp.intelliSenseEngine": "Tag Parser",
+  "idf.adapterTargetName": "esp32",
+  "idf.openOcdConfigs": [
+    "board/esp32-wrover-kit-3.3v.cfg"
+  ],
+  "idf.portWin": "COM13",
+  "idf.flashType": "UART",
+  "idf.monitorBaudRate": "115200",
+  "idf.flashBaudRate": "921600",
+  "files.associations": {
+    "array": "c",
+    "string": "c",
+    "string_view": "c",
+    "cerrno": "c",
+    "complex": "c",
+    "esp_event.h": "c",
+    "netdb.h": "c",
+    "esp_system.h": "c",
+    "esp_attr.h": "c",
+    "esp_wifi.h": "c",
+    "errno.h": "c"
+  }
+}

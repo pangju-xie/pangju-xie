@@ -1,0 +1,537 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 271414342, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15576
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (30) boot: ESP-IDF v5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jul 31 2023 09:04:56[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=223f8h (140280) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=00032420 vaddr=3ffb0000 size=03710h ( 14096) load[0m
+[0;32mI (159) esp_image: segment 2: paddr=00035b38 vaddr=40080000 size=0a4e0h ( 42208) load[0m
+[0;32mI (177) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=83754h (538452) map[0m
+[0;32mI (372) esp_image: segment 4: paddr=000c377c vaddr=4008a4e0 size=0bd9ch ( 48540) load[0m
+[0;32mI (403) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (403) boot: Disabling RNG early entropy source...[0m
+[0;32mI (415) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu up.[0m
+[0;32mI (415) cpu_start: Starting app cpu, entry point is 0x40081448[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (433) cpu_start: Pro cpu start user code[0m
+[0;32mI (433) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (433) cpu_start: Application information:[0m
+[0;32mI (438) cpu_start: Project name:     static_ip[0m
+[0;32mI (443) cpu_start: App version:      1[0m
+[0;32mI (448) cpu_start: Compile time:     Jul 31 2023 09:04:45[0m
+[0;32mI (454) cpu_start: ELF file SHA256:  1ecdba06a0c2103d...[0m
+[0;32mI (460) cpu_start: ESP-IDF:          v5.1[0m
+[0;32mI (464) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (469) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (474) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (479) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFB77D0 len 00028830 (162 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (511) heap_init: At 4009627C len 00009D84 (39 KiB): IRAM[0m
+[0;32mI (519) spi_flash: detected chip: generic[0m
+[0;32mI (522) spi_flash: flash io: dio[0m
+[0;33mW (526) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (540) app_start: Starting scheduler on CPU0[0m
+[0;32mI (544) app_start: Starting scheduler on CPU1[0m
+[0;32mI (544) main_task: Started on CPU0[0m
+[0;32mI (554) main_task: Calling app_main()[0m
+[0;32mI (584) TCP_Client_NON_Blocking: ESP_WIFI_MODE_STA[0m
+[0;32mI (594) TCP_Client_NON_Blocking: UART[0m
+I (604) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0
+I (614) wifi:wifi firmware version: b2f1f86
+I (614) wifi:wifi certification version: v7.0
+I (614) wifi:config NVS flash: enabled
+I (614) wifi:config nano formating: disabled
+I (624) wifi:Init data frame dynamic rx buffer num: 32
+I (624) wifi:Init management frame dynamic rx buffer num: 32
+I (634) wifi:Init management short buffer num: 32
+I (634) wifi:Init dynamic tx buffer num: 32
+I (644) wifi:Init static rx buffer size: 1600
+I (644) wifi:Init static rx buffer num: 10
+I (644) wifi:Init dynamic rx buffer num: 32
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: tcpip mbox: 32[0m
+[0;32mI (664) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp tx win: 5744[0m
+[0;32mI (674) wifi_init: tcp rx win: 5744[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (694) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (804) wifi:mode : sta (30:83:98:d5:02:9c)
+I (804) wifi:enable tsf
+[0;32mI (804) TCP_Client_NON_Blocking: wifi_init_sta finished.[0m
+I (814) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (814) wifi:state: init -> auth (b0)
+I (824) wifi:state: auth -> assoc (0)
+I (824) wifi:state: assoc -> run (10)
+I (884) wifi:connected with ESP_32, aid = 3, channel 6, BW20, bssid = e2:b9:a6:fd:2c:de
+I (884) wifi:security: WPA2-PSK, phy: bgn, rssi: -47
+I (884) wifi:pm start, type: 1
+
+[0;32mI (894) esp_netif_handlers: sta ip: 192.168.1.142, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (894) TCP_Client_NON_Blocking: static ip:192.168.1.142[0m
+I (894) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (904) TCP_Client_NON_Blocking: connected to ap SSID:ESP_32 password:adminadmin[0m
+[0;32mI (914) UDP_CLIENT: Socket created, sending to 255.255.255.255:7789[0m
+[0;32mI (924) main_task: Returned from app_main()[0m
+[0;32mI (934) UDP_CLIENT: Read 816 bytes.[0m
+[0;32mI (934) UDP_CLIENT: Message sent[0m
+[0;32mI (964) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (964) UDP_CLIENT: Message sent[0m
+[0;32mI (994) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (994) UDP_CLIENT: Message sent[0m
+[0;32mI (1024) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1024) UDP_CLIENT: Message sent[0m
+[0;32mI (1054) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1054) UDP_CLIENT: Message sent[0m
+[0;32mI (1084) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1084) UDP_CLIENT: Message sent[0m
+[0;32mI (1114) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1114) UDP_CLIENT: Message sent[0m
+[0;32mI (1144) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1144) UDP_CLIENT: Message sent[0m
+[0;32mI (1174) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1174) UDP_CLIENT: Message sent[0m
+[0;32mI (1204) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1204) UDP_CLIENT: Message sent[0m
+[0;32mI (1234) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1234) UDP_CLIENT: Message sent[0m
+[0;32mI (1264) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1264) UDP_CLIENT: Message sent[0m
+[0;32mI (1294) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1294) UDP_CLIENT: Message sent[0m
+[0;32mI (1324) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1324) UDP_CLIENT: Message sent[0m
+[0;32mI (1354) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1354) UDP_CLIENT: Message sent[0m
+[0;32mI (1384) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1384) UDP_CLIENT: Message sent[0m
+[0;32mI (1414) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1414) UDP_CLIENT: Message sent[0m
+[0;32mI (1444) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1444) UDP_CLIENT: Message sent[0m
+[0;32mI (1474) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1474) UDP_CLIENT: Message sent[0m
+[0;32mI (1504) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1504) UDP_CLIENT: Message sent[0m
+[0;32mI (1534) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1534) UDP_CLIENT: Message sent[0m
+[0;32mI (1564) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1564) UDP_CLIENT: Message sent[0m
+[0;32mI (1594) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1594) UDP_CLIENT: Message sent[0m
+[0;32mI (1624) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1624) UDP_CLIENT: Message sent[0m
+[0;32mI (1654) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1654) UDP_CLIENT: Message sent[0m
+[0;32mI (1684) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1684) UDP_CLIENT: Message sent[0m
+[0;32mI (1714) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1714) UDP_CLIENT: Message sent[0m
+[0;32mI (1744) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1744) UDP_CLIENT: Message sent[0m
+[0;32mI (1774) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1774) UDP_CLIENT: Message sent[0m
+[0;32mI (1804) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1804) UDP_CLIENT: Message sent[0m
+[0;32mI (1834) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1834) UDP_CLIENT: Message sent[0m
+[0;32mI (1864) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1864) UDP_CLIENT: Message sent[0m
+[0;32mI (1894) UDP_CLIENT: Read 22 bytes.[0m
+[0;32mI (1894) UDP_CLIENT: Message sent[0m
+[0;32mI (1924) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1924) UDP_CLIENT: Message sent[0m
+[0;32mI (1954) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (1954) UDP_CLIENT: Message sent[0m
+[0;32mI (1984) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (1984) UDP_CLIENT: Message sent[0m
+[0;32mI (2014) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2014) UDP_CLIENT: Message sent[0m
+[0;32mI (2044) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2044) UDP_CLIENT: Message sent[0m
+[0;32mI (2074) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2074) UDP_CLIENT: Message sent[0m
+[0;32mI (2104) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2104) UDP_CLIENT: Message sent[0m
+[0;32mI (2134) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2134) UDP_CLIENT: Message sent[0m
+[0;32mI (2164) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2164) UDP_CLIENT: Message sent[0m
+[0;32mI (2194) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2194) UDP_CLIENT: Message sent[0m
+[0;32mI (2224) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2224) UDP_CLIENT: Message sent[0m
+[0;32mI (2254) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2254) UDP_CLIENT: Message sent[0m
+[0;32mI (2284) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2284) UDP_CLIENT: Message sent[0m
+[0;32mI (2314) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2314) UDP_CLIENT: Message sent[0m
+[0;32mI (2344) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2344) UDP_CLIENT: Message sent[0m
+[0;32mI (2374) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2374) UDP_CLIENT: Message sent[0m
+[0;32mI (2404) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2404) UDP_CLIENT: Message sent[0m
+[0;32mI (2434) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2434) UDP_CLIENT: Message sent[0m
+[0;32mI (2464) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2464) UDP_CLIENT: Message sent[0m
+[0;32mI (2494) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2494) UDP_CLIENT: Message sent[0m
+[0;32mI (2524) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2524) UDP_CLIENT: Message sent[0m
+[0;32mI (2554) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2554) UDP_CLIENT: Message sent[0m
+[0;32mI (2584) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2584) UDP_CLIENT: Message sent[0m
+[0;32mI (2614) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2614) UDP_CLIENT: Message sent[0m
+[0;32mI (2644) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2644) UDP_CLIENT: Message sent[0m
+[0;32mI (2674) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2674) UDP_CLIENT: Message sent[0m
+[0;32mI (2704) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2704) UDP_CLIENT: Message sent[0m
+[0;32mI (2734) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2734) UDP_CLIENT: Message sent[0m
+[0;32mI (2764) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2764) UDP_CLIENT: Message sent[0m
+[0;32mI (2794) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2794) UDP_CLIENT: Message sent[0m
+[0;32mI (2824) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2824) UDP_CLIENT: Message sent[0m
+[0;32mI (2854) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2854) UDP_CLIENT: Message sent[0m
+[0;32mI (2884) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2884) UDP_CLIENT: Message sent[0m
+[0;32mI (2914) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2914) UDP_CLIENT: Message sent[0m
+[0;32mI (2944) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (2944) UDP_CLIENT: Message sent[0m
+[0;32mI (2974) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (2974) UDP_CLIENT: Message sent[0m
+[0;32mI (3004) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3004) UDP_CLIENT: Message sent[0m
+[0;32mI (3034) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3034) UDP_CLIENT: Message sent[0m
+[0;32mI (3064) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3064) UDP_CLIENT: Message sent[0m
+[0;32mI (3094) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3094) UDP_CLIENT: Message sent[0m
+[0;32mI (3124) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3124) UDP_CLIENT: Message sent[0m
+[0;32mI (3154) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3154) UDP_CLIENT: Message sent[0m
+[0;32mI (3184) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3184) UDP_CLIENT: Message sent[0m
+[0;32mI (3214) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3214) UDP_CLIENT: Message sent[0m
+[0;32mI (3244) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3244) UDP_CLIENT: Message sent[0m
+[0;32mI (3274) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3274) UDP_CLIENT: Message sent[0m
+[0;32mI (3304) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3304) UDP_CLIENT: Message sent[0m
+[0;32mI (3334) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3334) UDP_CLIENT: Message sent[0m
+[0;32mI (3364) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3364) UDP_CLIENT: Message sent[0m
+[0;32mI (3394) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3394) UDP_CLIENT: Message sent[0m
+[0;32mI (3424) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3424) UDP_CLIENT: Message sent[0m
+[0;32mI (3454) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3454) UDP_CLIENT: Message sent[0m
+[0;32mI (3484) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3484) UDP_CLIENT: Message sent[0m
+[0;32mI (3514) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3514) UDP_CLIENT: Message sent[0m
+[0;32mI (3544) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3544) UDP_CLIENT: Message sent[0m
+[0;32mI (3574) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3574) UDP_CLIENT: Message sent[0m
+[0;32mI (3604) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3604) UDP_CLIENT: Message sent[0m
+[0;32mI (3634) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3634) UDP_CLIENT: Message sent[0m
+[0;32mI (3664) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3664) UDP_CLIENT: Message sent[0m
+[0;32mI (3694) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3694) UDP_CLIENT: Message sent[0m
+[0;32mI (3724) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3724) UDP_CLIENT: Message sent[0m
+[0;32mI (3754) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3754) UDP_CLIENT: Message sent[0m
+[0;32mI (3784) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3784) UDP_CLIENT: Message sent[0m
+[0;32mI (3814) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3814) UDP_CLIENT: Message sent[0m
+[0;32mI (3844) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3844) UDP_CLIENT: Message sent[0m
+[0;32mI (3874) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3874) UDP_CLIENT: Message sent[0m
+[0;32mI (3904) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3904) UDP_CLIENT: Message sent[0m
+[0;32mI (3934) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3934) UDP_CLIENT: Message sent[0m
+[0;32mI (3964) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (3964) UDP_CLIENT: Message sent[0m
+[0;32mI (3994) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (3994) UDP_CLIENT: Message sent[0m
+[0;32mI (4024) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4024) UDP_CLIENT: Message sent[0m
+[0;32mI (4054) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4054) UDP_CLIENT: Message sent[0m
+[0;32mI (4084) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4084) UDP_CLIENT: Message sent[0m
+[0;32mI (4114) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4114) UDP_CLIENT: Message sent[0m
+[0;32mI (4144) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4144) UDP_CLIENT: Message sent[0m
+[0;32mI (4174) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4174) UDP_CLIENT: Message sent[0m
+[0;32mI (4204) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4204) UDP_CLIENT: Message sent[0m
+[0;32mI (4234) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4234) UDP_CLIENT: Message sent[0m
+[0;32mI (4264) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4264) UDP_CLIENT: Message sent[0m
+[0;32mI (4294) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4294) UDP_CLIENT: Message sent[0m
+[0;32mI (4324) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4324) UDP_CLIENT: Message sent[0m
+[0;32mI (4354) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4354) UDP_CLIENT: Message sent[0m
+[0;32mI (4384) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4384) UDP_CLIENT: Message sent[0m
+[0;32mI (4414) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4414) UDP_CLIENT: Message sent[0m
+[0;32mI (4444) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4444) UDP_CLIENT: Message sent[0m
+[0;32mI (4474) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4474) UDP_CLIENT: Message sent[0m
+[0;32mI (4504) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4504) UDP_CLIENT: Message sent[0m
+[0;32mI (4534) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4534) UDP_CLIENT: Message sent[0m
+[0;32mI (4564) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4564) UDP_CLIENT: Message sent[0m
+[0;32mI (4594) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4594) UDP_CLIENT: Message sent[0m
+[0;32mI (4624) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4624) UDP_CLIENT: Message sent[0m
+[0;32mI (4654) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4654) UDP_CLIENT: Message sent[0m
+[0;32mI (4684) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4684) UDP_CLIENT: Message sent[0m
+[0;32mI (4714) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4714) UDP_CLIENT: Message sent[0m
+[0;32mI (4744) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4744) UDP_CLIENT: Message sent[0m
+[0;32mI (4774) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4774) UDP_CLIENT: Message sent[0m
+[0;32mI (4804) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4804) UDP_CLIENT: Message sent[0m
+[0;32mI (4834) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4834) UDP_CLIENT: Message sent[0m
+[0;32mI (4864) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4864) UDP_CLIENT: Message sent[0m
+[0;32mI (4894) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4894) UDP_CLIENT: Message sent[0m
+[0;32mI (4924) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4924) UDP_CLIENT: Message sent[0m
+[0;32mI (4954) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (4954) UDP_CLIENT: Message sent[0m
+[0;32mI (4984) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (4984) UDP_CLIENT: Message sent[0m
+[0;32mI (5014) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5014) UDP_CLIENT: Message sent[0m
+[0;32mI (5044) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5044) UDP_CLIENT: Message sent[0m
+[0;32mI (5074) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5074) UDP_CLIENT: Message sent[0m
+[0;32mI (5104) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5104) UDP_CLIENT: Message sent[0m
+[0;32mI (5134) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5134) UDP_CLIENT: Message sent[0m
+[0;32mI (5164) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5164) UDP_CLIENT: Message sent[0m
+[0;32mI (5194) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5194) UDP_CLIENT: Message sent[0m
+[0;32mI (5224) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5224) UDP_CLIENT: Message sent[0m
+[0;32mI (5254) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5254) UDP_CLIENT: Message sent[0m
+[0;32mI (5284) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5284) UDP_CLIENT: Message sent[0m
+[0;32mI (5314) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5314) UDP_CLIENT: Message sent[0m
+[0;32mI (5344) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5344) UDP_CLIENT: Message sent[0m
+[0;32mI (5374) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5374) UDP_CLIENT: Message sent[0m
+[0;32mI (5404) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5404) UDP_CLIENT: Message sent[0m
+[0;32mI (5434) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5434) UDP_CLIENT: Message sent[0m
+[0;32mI (5464) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5464) UDP_CLIENT: Message sent[0m
+[0;32mI (5494) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5494) UDP_CLIENT: Message sent[0m
+[0;32mI (5524) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5524) UDP_CLIENT: Message sent[0m
+[0;32mI (5554) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5554) UDP_CLIENT: Message sent[0m
+[0;32mI (5584) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5584) UDP_CLIENT: Message sent[0m
+[0;32mI (5614) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5614) UDP_CLIENT: Message sent[0m
+[0;32mI (5644) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5644) UDP_CLIENT: Message sent[0m
+[0;32mI (5674) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5674) UDP_CLIENT: Message sent[0m
+[0;32mI (5704) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5704) UDP_CLIENT: Message sent[0m
+[0;32mI (5734) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5734) UDP_CLIENT: Message sent[0m
+[0;32mI (5764) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5764) UDP_CLIENT: Message sent[0m
+[0;32mI (5794) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5794) UDP_CLIENT: Message sent[0m
+[0;32mI (5824) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5824) UDP_CLIENT: Message sent[0m
+[0;32mI (5854) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5854) UDP_CLIENT: Message sent[0m
+[0;32mI (5884) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5884) UDP_CLIENT: Message sent[0m
+[0;32mI (5914) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5914) UDP_CLIENT: Message sent[0m
+[0;32mI (5944) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (5944) UDP_CLIENT: Message sent[0m
+[0;32mI (5974) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (5974) UDP_CLIENT: Message sent[0m
+[0;32mI (6004) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6004) UDP_CLIENT: Message sent[0m
+[0;32mI (6034) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6034) UDP_CLIENT: Message sent[0m
+[0;32mI (6064) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6064) UDP_CLIENT: Message sent[0m
+[0;32mI (6094) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6094) UDP_CLIENT: Message sent[0m
+[0;32mI (6124) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6124) UDP_CLIENT: Message sent[0m
+[0;32mI (6154) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6154) UDP_CLIENT: Message sent[0m
+[0;32mI (6184) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6184) UDP_CLIENT: Message sent[0m
+[0;32mI (6214) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6214) UDP_CLIENT: Message sent[0m
+[0;32mI (6244) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6244) UDP_CLIENT: Message sent[0m
+[0;32mI (6274) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6274) UDP_CLIENT: Message sent[0m
+[0;32mI (6304) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6304) UDP_CLIENT: Message sent[0m
+[0;32mI (6334) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6334) UDP_CLIENT: Message sent[0m
+[0;32mI (6364) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6364) UDP_CLIENT: Message sent[0m
+[0;32mI (6394) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6394) UDP_CLIENT: Message sent[0m
+[0;32mI (6424) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6424) UDP_CLIENT: Message sent[0m
+[0;32mI (6454) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6454) UDP_CLIENT: Message sent[0m
+[0;32mI (6484) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6484) UDP_CLIENT: Message sent[0m
+[0;32mI (6514) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6514) UDP_CLIENT: Message sent[0m
+[0;32mI (6544) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6544) UDP_CLIENT: Message sent[0m
+[0;32mI (6574) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6574) UDP_CLIENT: Message sent[0m
+[0;32mI (6604) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6604) UDP_CLIENT: Message sent[0m
+[0;32mI (6634) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6634) UDP_CLIENT: Message sent[0m
+[0;32mI (6664) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6664) UDP_CLIENT: Message sent[0m
+[0;32mI (6694) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6694) UDP_CLIENT: Message sent[0m
+[0;32mI (6724) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6724) UDP_CLIENT: Message sent[0m
+[0;32mI (6754) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6754) UDP_CLIENT: Message sent[0m
+[0;32mI (6784) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6784) UDP_CLIENT: Message sent[0m
+[0;32mI (6814) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6814) UDP_CLIENT: Message sent[0m
+[0;32mI (6844) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6844) UDP_CLIENT: Message sent[0m
+[0;32mI (6874) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6874) UDP_CLIENT: Message sent[0m
+[0;32mI (6904) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6904) UDP_CLIENT: Message sent[0m
+[0;32mI (6934) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6934) UDP_CLIENT: Message sent[0m
+[0;32mI (6964) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (6964) UDP_CLIENT: Message sent[0m
+[0;32mI (6994) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (6994) UDP_CLIENT: Message sent[0m
+[0;32mI (7024) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (7024) UDP_CLIENT: Message sent[0m
+[0;32mI (7054) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (7054) UDP_CLIENT: Message sent[0m
+[0;32mI (7084) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (7084) UDP_CLIENT: Message sent[0m
+[0;32mI (7114) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (7114) UDP_CLIENT: Message sent[0m
+[0;32mI (7144) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (7144) UDP_CLIENT: Message sent[0m
+[0;32mI (7174) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (7174) UDP_CLIENT: Message sent[0m
+[0;32mI (7204) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (7204) UDP_CLIENT: Message sent[0m
+[0;32mI (7234) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (7234) UDP_CLIENT: Message sent[0m
+[0;32mI (7264) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (7264) UDP_CLIENT: Message sent[0m
+[0;32mI (7294) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (7294) UDP_CLIENT: Message sent[0m
+[0;32mI (7324) UDP_CLIENT: Read 96 bytes.[0m
+[0;32mI (7324) UDP_CLIENT: Message sent[0m
+[0;32mI (7354) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (7354) UDP_CLIENT: Message sent[0m
+[0;32mI (7384) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (7384) UDP_CLIENT: Message sent[0m
+[0;32mI (8494) UDP_CLIENT: Read 48 bytes.[0m
+[0;32mI (8494) UDP_CLIENT: Message sent[0m
+
+ 

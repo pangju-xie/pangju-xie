@@ -1,0 +1,91 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D E:\Liz\IMU\software\IMU_MCU\esp32c6_tcp_client_with_uart\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6800 bytes. 0x800 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/tcp_client_with_uart.c.obj
+E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/main/tcp_client_with_uart.c: In function 'udp_client_task':
+E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/main/tcp_client_with_uart.c:261:10: warning: unused variable 'rx_buffer' [-Wunused-variable]
+  261 |     char rx_buffer[128];
+      |          ^~~~~~~~~
+E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/main/tcp_client_with_uart.c: In function 'tcp_client_task':
+E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/main/tcp_client_with_uart.c:424:13: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+  424 |         int rc = 0;
+      |             ^~
+E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/main/tcp_client_with_uart.c: At top level:
+E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/main/tcp_client_with_uart.c:355:13: warning: 'tcp_client_task' defined but not used [-Wunused-function]
+  355 | static void tcp_client_task(void *pvParameters)
+      |             ^~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable static_ip.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build/static_ip.bin
+[7/8] cmd.exe /C "cd /D E:\Liz\IMU\software\IMU_MCU\esp32c6_tcp_client_with_uart\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build/partition_table/partition-table.bin E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build/static_ip.bin"
+static_ip.bin binary size 0xbe6a0 bytes. Smallest app partition is 0x100000 bytes. 0x41960 bytes (26%) free.
+[7/8] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.1\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressif/frameworks/esp-idf-v5.1 -D SERIAL_TOOL=D:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build -P D:/Espressif/frameworks/esp-idf-v5.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM18 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 static_ip.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port COM18
+Connecting...
+Chip is ESP32-PICO-V3-02 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, Embedded Flash, Embedded PSRAM, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:83:98:d2:0a:04
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000cefff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26624 bytes to 16660...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a0... (100 %)
+Wrote 26624 bytes (16660 compressed) at 0x00001000 in 0.9 seconds (effective 249.1 kbit/s)...
+Hash of data verified.
+Compressed 779936 bytes to 502527...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c78d... (6 %)
+Writing at 0x00025b82... (9 %)
+Writing at 0x0002b0b4... (12 %)
+Writing at 0x00034bd8... (16 %)
+Writing at 0x0003ab72... (19 %)
+Writing at 0x0004043d... (22 %)
+Writing at 0x00045f30... (25 %)
+Writing at 0x0004b9f7... (29 %)
+Writing at 0x000512e8... (32 %)
+Writing at 0x00056676... (35 %)
+Writing at 0x0005bda6... (38 %)
+Writing at 0x0006178e... (41 %)
+Writing at 0x00067268... (45 %)
+Writing at 0x0006cf99... (48 %)
+Writing at 0x00072248... (51 %)
+Writing at 0x000775d4... (54 %)
+Writing at 0x0007cb51... (58 %)
+Writing at 0x00081e5b... (61 %)
+Writing at 0x0008754c... (64 %)
+Writing at 0x0008cdce... (67 %)
+Writing at 0x00092abc... (70 %)
+Writing at 0x0009802e... (74 %)
+Writing at 0x0009d998... (77 %)
+Writing at 0x000a33a4... (80 %)
+Writing at 0x000a90b6... (83 %)
+Writing at 0x000ae7c1... (87 %)
+Writing at 0x000b7114... (90 %)
+Writing at 0x000bf68d... (93 %)
+Writing at 0x000c5471... (96 %)
+Writing at 0x000caa3c... (100 %)
+Wrote 779936 bytes (502527 compressed) at 0x00010000 in 11.4 seconds (effective 549.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 332.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,0 +1,70 @@
+[1/5] cmd.exe /C "cd /D E:\Liz\IMU\software\IMU_MCU\esp32c6_tcp_client_with_uart\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build/partition_table/partition-table.bin E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build/static_ip.bin"
+static_ip.bin binary size 0xc1610 bytes. Smallest app partition is 0x100000 bytes. 0x3e9f0 bytes (24%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D E:\Liz\IMU\software\IMU_MCU\esp32c6_tcp_client_with_uart\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6800 bytes. 0x800 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.1\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressif/frameworks/esp-idf-v5.1 -D SERIAL_TOOL=D:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=E:/Liz/IMU/software/IMU_MCU/esp32c6_tcp_client_with_uart/build -P D:/Espressif/frameworks/esp-idf-v5.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM18 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 static_ip.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port COM18
+Connecting...
+Chip is ESP32-PICO-V3-02 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, Embedded Flash, Embedded PSRAM, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:83:98:d2:0a:04
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d1fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26624 bytes to 16660...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a0... (100 %)
+Wrote 26624 bytes (16660 compressed) at 0x00001000 in 0.9 seconds (effective 248.7 kbit/s)...
+Hash of data verified.
+Compressed 792080 bytes to 509507...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c73e... (6 %)
+Writing at 0x00025f56... (9 %)
+Writing at 0x0002b46d... (12 %)
+Writing at 0x00034efe... (15 %)
+Writing at 0x0003b2b5... (18 %)
+Writing at 0x00040c1a... (21 %)
+Writing at 0x00046604... (25 %)
+Writing at 0x0004c048... (28 %)
+Writing at 0x00051acb... (31 %)
+Writing at 0x00056f6f... (34 %)
+Writing at 0x0005c70b... (37 %)
+Writing at 0x00062070... (40 %)
+Writing at 0x000679ab... (43 %)
+Writing at 0x0006d728... (46 %)
+Writing at 0x00072d24... (50 %)
+Writing at 0x00078017... (53 %)
+Writing at 0x0007d506... (56 %)
+Writing at 0x00082906... (59 %)
+Writing at 0x00087f4f... (62 %)
+Writing at 0x0008d709... (65 %)
+Writing at 0x000933e8... (68 %)
+Writing at 0x00098954... (71 %)
+Writing at 0x0009e353... (75 %)
+Writing at 0x000a3cae... (78 %)
+Writing at 0x000a990c... (81 %)
+Writing at 0x000af292... (84 %)
+Writing at 0x000b7c86... (87 %)
+Writing at 0x000bfdd0... (90 %)
+Writing at 0x000c5cf8... (93 %)
+Writing at 0x000cb63f... (96 %)
+Writing at 0x000d0aa8... (100 %)
+Wrote 792080 bytes (509507 compressed) at 0x00010000 in 11.6 seconds (effective 548.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 327.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
